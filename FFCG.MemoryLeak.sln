@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "FFCG.MemoryLeak.Application", "FFCG.MemoryLeak.Application\FFCG.MemoryLeak.Application.sfproj", "{5DC3E628-E486-446A-8EC7-8416DB5C4B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.MemoryLeak.Writer.Services", "FFCG.MemoryLeak.Writer.Services\FFCG.MemoryLeak.Writer.Services.csproj", "{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Writer", "Writer", "{C5FA3E2C-EB89-4438-BFDF-5745E4AF7959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.MemoryLeak.Writer.Contract", "FFCG.MemoryLeak.Writer.Contract\FFCG.MemoryLeak.Writer.Contract.csproj", "{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.MemoryLeak.Writer.Domain", "FFCG.MemoryLeak.Writer.Domain\FFCG.MemoryLeak.Writer.Domain.csproj", "{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Debug|x64.ActiveCfg = Debug|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Debug|x64.Build.0 = Debug|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Debug|x64.Deploy.0 = Debug|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Release|Any CPU.ActiveCfg = Release|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Release|x64.ActiveCfg = Release|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Release|x64.Build.0 = Release|x64
+		{5DC3E628-E486-446A-8EC7-8416DB5C4B17}.Release|x64.Deploy.0 = Release|x64
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}.Debug|x64.ActiveCfg = Debug|x64
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}.Debug|x64.Build.0 = Debug|x64
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}.Release|Any CPU.ActiveCfg = Release|x64
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}.Release|x64.ActiveCfg = Release|x64
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD}.Release|x64.Build.0 = Release|x64
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Debug|x64.Build.0 = Debug|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Release|x64.ActiveCfg = Release|Any CPU
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D}.Release|x64.Build.0 = Release|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Debug|x64.Build.0 = Debug|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|x64.ActiveCfg = Release|Any CPU
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4046B2AF-5923-46BE-AF9E-64BF8BF0F0DD} = {C5FA3E2C-EB89-4438-BFDF-5745E4AF7959}
+		{AA0F5260-2B34-4284-BAE3-22EA4C398B1D} = {C5FA3E2C-EB89-4438-BFDF-5745E4AF7959}
+		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530} = {C5FA3E2C-EB89-4438-BFDF-5745E4AF7959}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06E9E2B5-089D-48B0-9C5F-944CBA562F5A}
+	EndGlobalSection
+EndGlobal
