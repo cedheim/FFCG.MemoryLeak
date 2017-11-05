@@ -21,6 +21,7 @@ namespace FFCG.MemoryLeak.Writer.Services
     {
         private const string QueueName = "InputQueue";
         private readonly Random _random = new Random();
+        private volatile int _queueSize = 0;
         
         public DocumentWriterService(StatefulServiceContext context)
             : base(context)
@@ -54,7 +55,11 @@ namespace FFCG.MemoryLeak.Writer.Services
                 {
 
                     cancellationToken.ThrowIfCancellationRequested();
-                    bool managedToDequeue;
+                    var managedToDequeue = false;
+                    var id = Guid.Empty;
+                    stopwatch.Reset();
+                    stopwatch.Start();
+
                     using (var transaction = StateManager.CreateTransaction())
                     {
                         var conditionalValue = await queue.TryDequeueAsync(transaction, cancellationToken);
@@ -62,25 +67,24 @@ namespace FFCG.MemoryLeak.Writer.Services
 
                         if (conditionalValue.HasValue)
                         {
-                            stopwatch.Reset();
-                            stopwatch.Start();
-
                             var state = conditionalValue.Value;
-                            var tasks = new List<Task>
-                            {
-                                Task.Delay(TimeSpan.FromMilliseconds(10), cancellationToken)
-                            };
-
-                            await Task.WhenAll(tasks);
-                            stopwatch.Stop();
-                            ServiceEventSource.Current.ServiceMessage(Context,
-                                $"DocumentWriterService - Dequeued {state.Id}, Time: {stopwatch.ElapsedMilliseconds}");
+                            id = state.Id;
                         }
                         await transaction.CommitAsync();
                     }
 
+                    stopwatch.Stop();
+
                     if (!managedToDequeue)
+                    {
                         await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
+                    }
+                    else
+                    {
+                        --_queueSize;
+                        ServiceEventSource.Current.ServiceMessage(Context,
+                            $"DocumentWriterService - Dequeued {id}, Time: {stopwatch.ElapsedMilliseconds}");
+                    }
                 }
                 catch (TimeoutException e)
                 {
@@ -134,6 +138,7 @@ namespace FFCG.MemoryLeak.Writer.Services
                         await transaction.CommitAsync();
                     }
 
+                    ++_queueSize;
                     break;
                 }
                 catch (TimeoutException)
@@ -146,6 +151,13 @@ namespace FFCG.MemoryLeak.Writer.Services
             stopwatch.Stop();
 
             ServiceEventSource.Current.ServiceMessage(Context, $"DocumentWriterService - Queued {state.Id}, Time: {stopwatch.ElapsedMilliseconds}");
+        }
+
+        public async Task<long> QueueSize()
+        {
+            var queue = await this.StateManager.GetOrAddAsync<IReliableConcurrentQueue<DocumentState>>(QueueName);
+
+            return queue.Count;
         }
     }
 }

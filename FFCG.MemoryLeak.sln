@@ -13,6 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.MemoryLeak.Writer.Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.MemoryLeak.Writer.Domain", "FFCG.MemoryLeak.Writer.Domain\FFCG.MemoryLeak.Writer.Domain.csproj", "{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FFCG.MemoryLeak.WebApi", "FFCG.MemoryLeak.WebApi\FFCG.MemoryLeak.WebApi.csproj", "{A68696EC-C074-4428-8223-F34410183D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.MemoryLeak.WebTests", "FFCG.MemoryLeak.WebTests\FFCG.MemoryLeak.WebTests.csproj", "{98971C82-CF8C-4269-B810-FA654D1F772B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAC11D4F-BE12-494B-9B0A-A2553A01BCF5}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +60,22 @@ Global
 		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|Any CPU.Build.0 = Release|Any CPU
 		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|x64.ActiveCfg = Release|Any CPU
 		{715E6DB9-ABC7-4039-9C2F-3CDCD5AF8530}.Release|x64.Build.0 = Release|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Debug|x64.Build.0 = Debug|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Release|x64.ActiveCfg = Release|Any CPU
+		{A68696EC-C074-4428-8223-F34410183D4C}.Release|x64.Build.0 = Release|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Debug|x64.Build.0 = Debug|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Release|x64.ActiveCfg = Release|Any CPU
+		{98971C82-CF8C-4269-B810-FA654D1F772B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

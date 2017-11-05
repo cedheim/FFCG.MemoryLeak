@@ -7,5 +7,7 @@ namespace FFCG.MemoryLeak.Writer.Contract
     public interface IDocumentWriterService : IService
     {
         Task AddToQueue(DocumentState state);
+
+        Task<long> QueueSize();
     }
 }
